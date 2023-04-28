@@ -1,0 +1,22 @@
+{% block content %}
+{% csrf_token %}
+        <div class="regdiv">
+            <!-- all data captured within a form can be accessed in the views 
+            using the name of that field -->
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br>
+            <input placeholder="Customer_Fname" name="firstname" type="text"
+            required>
+            <br> 
+            <input placeholder="Customer_Lname" name="lastname" type="text" required> 
+            <br>
+            <input placeholder="date_of_birth" name="date_of_birth" type="date" required>
+            <br> 
+            <input type="submit" class="button1" title="SUBMIT" id="submitbtn"> 
+            
+        </div>
+    </form>
+{% endblock %}

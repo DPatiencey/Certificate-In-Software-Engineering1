@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GENQ KYC FORM</title>
+
+  <style>
+    html {
+       font-family: sans-serif;
+        color: hsl(309, 33%, 8%); 
+      }
+    body {
+      
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+  }
+    div, article { padding: 10px; margin: 5px; border: 1px solid #8e8989; }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>GENQ KYC FORM</h1>
+
+  <h2>ID (#demo)</h2>
+  <div id="demo"> Bio Data</div>
+
+  <h2>Class (.demo)</h2>
+  <div class="demo">(1) First Name </div>
+  <div class="demo">(2) Last Name </div>
+  <div class="demo">(3) Date of Birth </div>
+  <div class="demo">(4) Gender </div>
+
+  <h2>Tag (Gender)</h2>
+  <article>Female</article>
+  <article>Male</article>
+
+  <h2>Query Selector</h2>
+  <div id="demo-query">gender</div>
+
+  <h2>Query Selector All</h2>
+  <div class="demo-query-all">Access me by query all (1)</div>
+  <div class="demo-query-all">Access me by query all (2)</div>
+
+  <h2>ID (#demo)</h2>
+  <div id="demo"> Location </div>
+
+  <h3>Class (.demo)</h3>
+  <div class="demo">(1) Country </div>
+  <div class="demo">(2) State </div>
+  <div class="demo">(3) Town </div>
+  <div class="demo">(4) Zip code </div>
+
+  <h4>ID (#demo)</h4>
+  <div id="demo"> Contacts and Address </div>
+
+  <h2>Class (.demo)</h2>
+  <div class="demo">(1) Phone Number 1 </div>
+  <div class="demo">(2) Phone Number 2 </div>
+  <div class="demo">(3) Email </div>
+
+</body>
+<script src="{% static 'js/access.js' %}">
+
+  </script>
+
+</html>

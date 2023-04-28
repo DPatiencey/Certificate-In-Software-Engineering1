@@ -1,0 +1,48 @@
+{% extends 'registration/base.html'%} {% block content%}
+<br></br>
+
+<div class = "container">
+  <h1 class= "text-center">GENQ KYC FORM</h1>
+  <br>
+
+  <div class = "container">
+    <form action = "" method = "GET">
+      {{product_filters.form}}
+      <input 
+      type = "submit"
+      value = "Search Customer"
+      class="btn btn-secondary btn"/>
+    </form>
+  </div>
+
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Bio Date</th>
+        <th scope="col">Location</th>
+        <th scope="col">Contacts and Address</th>
+        <th scope = "col">Detail</th>
+      </tr>
+    </thead>
+    {% for customer in customer%}
+    <tbody>
+      <tr>    
+        <td>{{Customer.customer_Fname}}</td>
+        <td>{{Customer.customer_Lname}}</td>
+        <td>{{Customer.date_of_birth}}</td>
+        <td>{{Customer.gender}}</td>
+        
+        <td><a # href="{% url 'customer_detail' customer.id %}" 
+              ><input
+                type="submit"
+                value=""
+                class="btn btn-secondary btn"
+                type="button"
+            /></a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+{% endblock%}

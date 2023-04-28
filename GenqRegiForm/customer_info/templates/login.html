@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <h1>GENQ KYC FORM</h1>
+    <!-- form action is the url where the form posts its data -->
+    <!-- method is the type of request made by the form either post or get -->
+    <form action="{% url 'login_user' %}" id="login_form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="regdiv">
+          <div class="container container-fluid top">
+        <h1 class = "text-white text-center" style = "color: #f0093b ">SUBMIT.</h1><br><br>  
+       </div>     
+            <!-- all data captured within a form can be accessed in the views 
+            using the name of that field -->
+            <input placeholder="Customer_Fname" name="firstname" type="text"
+            required>
+            <br>
+            <input placeholder="Customer_Lname" name="lastname" type="text"
+            required>
+            <br> 
+            <input placeholder="password" name="password" type="password" required>
+            <br>
+            <input placeholder="confirm_password" name="password" type="password" required>
+            <br>
+            <input type="submit" class="button1" title="SUBMIT" id="submitbtn">  
+        </div>
+    </form>
+    <br><br>
+{% endblock%}
